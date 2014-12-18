@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- From: file:/C:/Users/Buhab/AndroidStudioProjects/MaterialDesign/app/src/main/res/values-v21/strings.xml -->
+    <eat-comment/>
+    <string name="next">Next</string>
+    <!-- From: file:/C:/Users/Buhab/AndroidStudioProjects/MaterialDesign/app/src/main/res/values-v21/styles.xml -->
+    <eat-comment/>
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <item name="android:colorPrimary">@color/primaryColor</item>
+        <item name="android:colorPrimaryDark">@color/primaryColorDark</item>
+        <item name="android:colorAccent">@color/accentColor</item>
+    </style>
     <!-- From: file:/C:/Users/Buhab/AndroidStudioProjects/MaterialDesign/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/res/values-v21/values.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance.Material"/>
