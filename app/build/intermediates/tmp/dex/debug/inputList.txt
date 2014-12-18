@@ -1,0 +1,5 @@
+C:\Users\Buhab\AndroidStudioProjects\MaterialDesign\app\build\intermediates\classes\debug
+C:\Users\Buhab\AndroidStudioProjects\MaterialDesign\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.2-9559c7e22c25bf722b8c5055608cdd14b2737113.jar
+C:\Users\Buhab\AndroidStudioProjects\MaterialDesign\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.2-f47ec625c28979b2d4e6b5f5f6e25a135f16efbf.jar
+C:\Users\Buhab\AndroidStudioProjects\MaterialDesign\app\build\intermediates\pre-dexed\debug\classes-77491d638ce6a8a033aa2d77f5e3edfc6505f68b.jar
+C:\Users\Buhab\AndroidStudioProjects\MaterialDesign\app\build\intermediates\pre-dexed\debug\classes-a2e4f0843fb5c889561b2f5ca7cdc88301b7bd53.jar
