@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +30,8 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mFromSavedInstanceState;
     private View drawerView;
 
+    private RecyclerView recyclerView;
+
     public NavigationDrawerFragment() {
         // Required empty public constructor
     }
@@ -45,11 +49,14 @@ public class NavigationDrawerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+
+        View layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
+        recyclerView = (RecyclerView) layout.findViewById(R.id.containerDrawerList);
+        return layout;
     }
 
 
-    public void setUp(int fragmentId, DrawerLayout drawerLayout, Toolbar toolbar) {
+    public void setUp(int fragmentId, DrawerLayout drawerLayout, final Toolbar toolbar) {
 
         drawerView = getActivity().findViewById(fragmentId);
         mDrawerLayout = drawerLayout;
@@ -68,6 +75,16 @@ public class NavigationDrawerFragment extends Fragment {
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
                 getActivity().invalidateOptionsMenu();
+            }
+
+            @Override
+            public void onDrawerSlide(View drawerView, float slideOffset) {
+                //super.onDrawerSlide(drawerView, slideOffset);
+                //Log.d("BOBO", "offset: " + slideOffset);
+                if (slideOffset < 0.5) {
+                    toolbar.setAlpha(1 - slideOffset);
+                }
+
             }
         };
 
