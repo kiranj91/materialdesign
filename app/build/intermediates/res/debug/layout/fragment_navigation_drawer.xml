@@ -2,20 +2,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FB8C00"
+    android:background="#DADADA"
     tools:context="com.example.buhab.materialdesign.NavigationDrawerFragment">
 
-    <ImageView
-        android:id="@+id/imView"
-        android:layout_width="280dp"
-        android:layout_height="140dp"
-        android:src="@drawable/ic_abstract"/>
+    <LinearLayout
+        android:id="@+id/containerDrawerImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FB8C00"
+        android:orientation="vertical">
 
-    <TextView
-        android:layout_below="@+id/imView"
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="280dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ic_abstract" />
+
+        <TextView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:gravity="center"
+            android:text="@string/image_title" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/containerDrawerList"
         android:layout_width="280dp"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
+        android:layout_below="@+id/containerDrawerImage"></android.support.v7.widget.RecyclerView>
 </RelativeLayout>
 <!-- From: file:/C:/Users/Buhab/AndroidStudioProjects/MaterialDesign/app/src/main/res/layout/fragment_navigation_drawer.xml -->
