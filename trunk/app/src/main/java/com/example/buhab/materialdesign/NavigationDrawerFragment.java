@@ -4,15 +4,21 @@ package com.example.buhab.materialdesign;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.app.Fragment;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -30,6 +36,7 @@ public class NavigationDrawerFragment extends Fragment {
     private boolean mFromSavedInstanceState;
     private View drawerView;
 
+    private DataInfoAdapter dataInfoAdapter;
     private RecyclerView recyclerView;
 
     public NavigationDrawerFragment() {
@@ -52,9 +59,28 @@ public class NavigationDrawerFragment extends Fragment {
 
         View layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
         recyclerView = (RecyclerView) layout.findViewById(R.id.containerDrawerList);
+        dataInfoAdapter = new DataInfoAdapter(getActivity(), getData());
+        recyclerView.setAdapter(dataInfoAdapter);
+        //recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(dataInfoAdapter.getItemCount(), 0));
         return layout;
     }
 
+    public static List<DataInfo> getData() {
+        List<DataInfo> data = new ArrayList<DataInfo>();
+
+        int icons[] = {R.drawable.ic_next, R.drawable.ic_next, R.drawable.ic_next, R.drawable.ic_next};
+        String titles[] = {"title 1", "title 2", "title 3", "title 4"};
+
+        for (int i = 0; i < titles.length && i < icons.length; i++) {
+            DataInfo currentData = new DataInfo();
+            currentData.iconId = icons[i];
+            currentData.title = titles[i];
+            data.add(currentData);
+        }
+
+        return data;
+    }
 
     public void setUp(int fragmentId, DrawerLayout drawerLayout, final Toolbar toolbar) {
 

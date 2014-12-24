@@ -2,6 +2,13 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\Buhab\AndroidStudioProjects\MaterialDesign\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.2\classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4796f18d3750bf2bfa078407a94a7f9db35b440d">
+        <dex dex="C:\Users\Buhab\AndroidStudioProjects\MaterialDesign\app\build\intermediates\pre-dexed\debug\classes-43e64f14dea6937881c06700d2e5cfea2a066e62.jar" />
+    </item>
+    <item
         jar="C:\Android\android-sdk-windows\extras\android\m2repository\com\android\support\support-annotations\21.0.2\support-annotations-21.0.2.jar"
         jumboMode="false"
         revision="21.1.1"

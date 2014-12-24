@@ -38,7 +38,7 @@ public class DataInfoAdapter extends RecyclerView.Adapter<DataInfoAdapter.DataIn
 
     @Override
     public int getItemCount() {
-        return 0;
+        return data.size();
     }
 
     class DataInfoViewHolder extends RecyclerView.ViewHolder {
